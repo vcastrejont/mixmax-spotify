@@ -1,0 +1,27 @@
+{
+  "name": "mixmax-spotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcastrejont/mixmax-spotify.git"
+  },
+  "author": "Victor Castrejon<vcastrejont@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vcastrejont/mixmax-spotify/issues"
+  },
+  "homepage": "https://github.com/vcastrejont/mixmax-spotify#readme",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "cors": "^2.7.1",
+    "express": "^4.12.3",
+    "pem": "^1.8.3",
+    "request": "^2.64.0",
+    "underscore": "^1.8.3"
+  }
+}
