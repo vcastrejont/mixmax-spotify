@@ -1,4 +1,5 @@
-var playerHandler = function(){
+var playerHandler = function(e){
+  e.preventDefault();
   var player= document.getElementById("mxplayer"); 
   var play= document.getElementById("mxplay"); 
  

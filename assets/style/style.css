@@ -1,8 +1,10 @@
-button#mxplay{
+#mxplay{
+  display:inline-block;  
   width: 50px;
   height: 50px;
   background: rgba(255, 255, 255, 0.9); 
-  border: none; 
+  box-sizing: border-box;
+  padding: 8px 16px 3px;
   border-radius: 100%; 
   margin: 10px 20px 0 0; 
   cursor: pointer;
@@ -10,11 +12,11 @@ button#mxplay{
  -webkit-transition: all 0.3s;
  -moz-transition: all 0.3s;
 }
-button#mxplay:focus {  
+#mxplay:focus {  
   outline: 0; 
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
 }
-button#mxplay::after { 
+#mxplay::after { 
   content: '';  
   display: inline-block;  
   position: relative;  
@@ -24,11 +26,11 @@ button#mxplay::after {
   border-width: 15px 0px 15px 20px;  
   border-color: transparent transparent transparent #333;
 }
-button#mxplay.active{
+#mxplay.active{
   background: #70A32F;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);
 }
-button:hover {
+#mxplay:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
