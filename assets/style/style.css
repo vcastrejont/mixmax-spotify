@@ -28,7 +28,6 @@ button#mxplay.active{
   background: #70A32F;
   box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.7);
 }
-
 button:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);

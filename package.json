@@ -1,7 +1,7 @@
 {
   "name": "mixmax-spotify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mixmax slash command integration",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
