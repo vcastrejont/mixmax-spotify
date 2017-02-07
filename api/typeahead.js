@@ -15,29 +15,30 @@ module.exports = function(req, res) {
   }
 
   request({
-    url: 'http://api.giphy.com/v1/gifs/search',
+    url: 'https://api.spotify.com/v1/search',
     qs: {
       q: term,
-      limit: 15,
-      api_key: config.giphy.key
+      limit: 20,
+      type: 'track'
     },
     gzip: true,
     json: true,
     timeout: 10 * 1000
   }, function(err, response) {
-    if (err || response.statusCode !== 200 || !response.body || !response.body.data) {
+    if (err || response.statusCode !== 200 || !response.body || !response.body.tracks ) {
       res.status(500).send('Error');
       return;
     }
-
-    var results = _.chain(response.body.data)
-      .reject(function(image) {
-        return !image || !image.images || !image.images.fixed_height_small;
+    
+    
+    var results = _.chain(response.body.tracks.items)
+      .filter(function(track) {
+        return track || track.name || track.id || track.artists || track.href;
       })
-      .map(function(image) {
+      .map(function(track) {
         return {
-          title: '<img style="height:75px" src="' + image.images.fixed_height_small.url + '">',
-          text: 'http://giphy.com/' + image.id
+          title: '<span>'+ track.artists[0].name + ' - ' + track.name + '</span>',
+          text: track.id
         };
       })
       .value();
